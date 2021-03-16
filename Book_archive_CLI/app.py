@@ -74,7 +74,7 @@ def list_reading_books():
 def change_status():
     # Getting the book's name and the changed status
     book_name = input("Please enter the book's name that you wanna change the status of:")
-    new_status = input("Please enter the new status of the book: ()")
+    new_status = input("Please enter the new status of the book: ")
     for i in data:
         name = i["name"]
         author = i["author"]
@@ -85,7 +85,7 @@ def change_status():
                 json.dump(data, file)
 # Defining a function that will remove a certain book from the archive
 def remove_book():
-    book_name = input("please enter the name of the book you wanna remove:")
+    book_name = input("please enter the name of the book you wanna remove: ")
     for i,j in enumerate(data):
         if j["name"] == book_name:
             del data[i]
